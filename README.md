@@ -112,22 +112,14 @@ The system displays a main menu with the following options:
 
 ---
 
-## Example Usage
-
-1. **Add a Doctor**:
-   - Select option `1` from the main menu.
-   - Enter the required details (ID, name, specialization, etc.).
-   - The doctor is added to the system.
-   
-2. **Display Doctors**:
-   - Select option `2` from the Doctor Section.
-   - A list of all doctors with their details is displayed.
-
----
-
 ## Instructions to Run
 
 1. Clone this repository to your local machine.
 2. Compile the Java files:
-   ```bash
-   javac HospitalManagementSystem.java
+    ```bash
+    javac HospitalManagementSystem.java
+    ```
+3. Run the program:
+    ```bash
+    java HospitalManagementSystem
+    ```
