@@ -114,6 +114,7 @@ public class HospitalManagementSystem {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int choice, subChoice;
+
         ArrayList<Doctor> doctors = new ArrayList<>();
         ArrayList<Patient> patients = new ArrayList<>();
         ArrayList<Staff> staffs = new ArrayList<>();
@@ -121,10 +122,11 @@ public class HospitalManagementSystem {
         ArrayList<Facility> facilities = new ArrayList<>();
 
         while (true) {
-            System.out.println("\n" + " ".repeat(45) + "--- Hospital Management System ---\n");
+            System.out.println("\n" + " ".repeat(50) + "--- Hospital Management System ---\n");
             System.out.println("1. Doctor Section | 2. Patient Section | 3. Medicine Section | 4. Facility Section | 5. Staff Section | 6. Exit\n");
             System.out.print("Enter your choice: ");
             choice = input.nextInt();
+
             switch (choice) {
                 case 1:
                     System.out.println("1. Add New Doctor | 2. Display Doctors");
@@ -140,6 +142,7 @@ public class HospitalManagementSystem {
                         }
                     }
                     break;
+
                 case 2:
                     System.out.println("1. Add New Patient | 2. Display Patients");
                     subChoice = input.nextInt();
@@ -154,6 +157,7 @@ public class HospitalManagementSystem {
                         }
                     }
                     break;
+
                 case 3:
                     System.out.println("1. Add New Medicine | 2. Display Medicines");
                     subChoice = input.nextInt();
@@ -162,12 +166,13 @@ public class HospitalManagementSystem {
                         medicine.addMedicine();
                         medicines.add(medicine);
                     } else if (subChoice == 2) {
-                        System.out.printf("%-20s %-20s %-15s %-10d %-10d\n", "Name", "Company", "Expiry Date", "Cost", "Quantity");
+                        System.out.printf("%-20s %-20s %-15s %-10s %-10s\n", "Name", "Company", "Expiry Date", "Cost", "Quantity");
                         for (Medicine medicine : medicines) {
                             medicine.displayMedicineInfo();
                         }
                     }
                     break;
+
                 case 4:
                     System.out.println("1. Add New Facility | 2. Display Facilities");
                     subChoice = input.nextInt();
@@ -182,6 +187,7 @@ public class HospitalManagementSystem {
                         }
                     }
                     break;
+
                 case 5:
                     System.out.println("1. Add New Staff | 2. Display Staff");
                     subChoice = input.nextInt();
@@ -196,9 +202,11 @@ public class HospitalManagementSystem {
                         }
                     }
                     break;
+
                 case 6:
                     System.out.println("Exiting the system. Thank you!");
                     return;
+
                 default:
                     System.out.println("Invalid choice. Try again.");
             }
